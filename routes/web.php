@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,8 +18,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('/sendStatus', 'ParkingSpaceController@updateStatus');
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('/parkingSpace', 'ParkingSpaceController');
+Route::post('/sendStatus', 'ParkingSpaceController@updateStatus');
+
