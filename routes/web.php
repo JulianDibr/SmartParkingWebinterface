@@ -18,3 +18,7 @@ Route::get('/', function () {
 });
 
 Route::post('/sendStatus', 'ParkingSpaceController@updateStatus');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
