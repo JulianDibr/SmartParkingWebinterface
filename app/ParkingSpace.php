@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class ParkingSpace extends Model
 {
-    protected $fillable = ['name', 'device_id', 'status'];
+    protected $fillable = ['name', 'device_id', 'group', 'status'];
 
     public function setStatusAttribute($value)
     {

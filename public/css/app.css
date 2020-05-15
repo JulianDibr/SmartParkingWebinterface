@@ -10986,11 +10986,11 @@ body {
 }
 
 .green {
-  color: green;
+  color: #38c172;
 }
 
 .red {
-  color: red;
+  color: #e3342f;
 }
 
 .space-card {
@@ -10999,10 +10999,22 @@ body {
 }
 
 .border-free {
-  border: 1px solid green;
+  border: 1px solid #38c172;
 }
 
 .border-occupied {
-  border: 1px solid red;
+  border: 1px solid #e3342f;
+}
+
+.submit-btn {
+  border-radius: 5px;
+  padding: 5px 20px;
+  background-color: #38c172;
+  color: #fff;
+}
+
+.submit-btn:hover {
+  background-color: #2c9559;
+  color: #fff;
 }
 

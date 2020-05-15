@@ -17,6 +17,7 @@ class CreateParkingSpacesTable extends Migration
             $table->id();
             $table->string('device_id')->unique();
             $table->string('name');
+            $table->string('group');
             $table->integer('status')->default(0); //0=no => Not Occupied; 1=yes => Occupied
             $table->timestamps();
         });

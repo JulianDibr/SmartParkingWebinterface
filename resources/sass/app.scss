@@ -59,11 +59,11 @@ html, body {
 }
 
 .green{
-    color: green;
+    color: $green;
 }
 
 .red{
-    color:red;
+    color:$red;
 }
 
 .space-card{
@@ -72,9 +72,21 @@ html, body {
 }
 
 .border-free{
-    border: 1px solid green;
+    border: 1px solid $green;
 }
 
 .border-occupied{
-    border: 1px solid red;
+    border: 1px solid $red;
+}
+
+.submit-btn{
+    border-radius: 5px;
+    padding: 5px 20px;
+    background-color: $green;
+    color: $white;
+
+    &:hover {
+        background-color: $green_hover;
+        color: $white;
+    }
 }
