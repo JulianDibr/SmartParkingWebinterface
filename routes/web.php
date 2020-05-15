@@ -23,5 +23,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('/parkingSpace', 'ParkingSpaceController');
-Route::post('/sendStatus', 'ParkingSpaceController@updateStatus');
 

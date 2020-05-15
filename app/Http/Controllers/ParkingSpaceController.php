@@ -46,7 +46,7 @@ class ParkingSpaceController extends Controller
 
     public function updateStatus(Request $request)
     {
-        $parkingSpace = ParkingSpace::where('device_id', $request->device_id->firstOrFail());
+        $parkingSpace = ParkingSpace::where('device_id', $request->device_id)->get();
         $parkingSpace->update(['status', $request->status]);
     }
 }
