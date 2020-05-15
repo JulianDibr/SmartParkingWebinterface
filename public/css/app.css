@@ -10993,3 +10993,16 @@ body {
   color: red;
 }
 
+.space-card {
+  height: 150px;
+  border-radius: 5px;
+}
+
+.border-free {
+  border: 1px solid green;
+}
+
+.border-occupied {
+  border: 1px solid red;
+}
+
