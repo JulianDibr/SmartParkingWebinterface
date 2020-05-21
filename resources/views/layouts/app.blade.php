@@ -51,7 +51,7 @@
                         @endif
                     @else
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/') }}">Startseite</a>
+                            <a class="nav-link" href="{{ url('/') }}">Übersicht</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('/settings') }}">Einstellungen</a>
