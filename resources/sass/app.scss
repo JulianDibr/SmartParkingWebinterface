@@ -7,6 +7,11 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+* {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
 html, body {
     background-color: #fff;
     color: #636b6f;
@@ -58,28 +63,28 @@ html, body {
     margin-bottom: 30px;
 }
 
-.green{
+.green {
     color: $green;
 }
 
-.red{
-    color:$red;
+.red {
+    color: $red;
 }
 
-.space-card{
+.space-card {
     height: 150px;
     border-radius: 5px;
 }
 
-.border-free{
+.border-free {
     border: 1px solid $green;
 }
 
-.border-occupied{
+.border-occupied {
     border: 1px solid $red;
 }
 
-.submit-btn{
+.submit-btn {
     border-radius: 5px;
     padding: 5px 20px;
     background-color: $green;
