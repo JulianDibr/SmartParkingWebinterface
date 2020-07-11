@@ -23,8 +23,8 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
 
-Route::resource('/parkingSpace', 'ParkingSpaceController');
+Route::resource('parkingSpace', 'ParkingSpaceController');
 
-Route::get('/settings', function () {
-    return view('settings');
-});
+Route::resource('settings', 'SettingsController');
+Route::post('settings/updateTimes', 'SettingsController@updateTimes')->name('settings.updateTimes');
+Route::post('settings/updateParkingtime', 'SettingsController@updateParkingtime')->name('settings.updateParkingtime');

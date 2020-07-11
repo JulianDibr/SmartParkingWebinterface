@@ -11,6 +11,8 @@ try {
     window.$ = window.jQuery = require('jquery');
 
     require('bootstrap');
+    var Inputmask = require('inputmask');
+    var bootstrapSelect = require("bootstrap-select/dist/js/bootstrap-select.min");
 } catch (e) {}
 
 /**
