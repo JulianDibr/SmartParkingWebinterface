@@ -6,7 +6,7 @@
     <form action="{{route('parkingSpace.store')}}" method="POST" class="my-5">
         @csrf
         <div class="row">
-            <div class="col-6 offset-3 form-group">
+            <div class="col-6 offset-3 form-group text-center">
                 <h2>Neuen Parkplatz erstellen</h2>
             </div>
         </div>
@@ -32,10 +32,11 @@
         </div>
     </form>
 
-    <form action="{{route('settings.updateParkingtime', 1)}}" method="POST" class="my-5">
+    <form action="{{route('settings.update', 1)}}" method="POST" class="my-5 py-5">
         @csrf
+        @method('PUT')
         <div class="row">
-            <div class="col-6 offset-3 form-group">
+            <div class="col-6 offset-3 form-group text-center">
                 <h2>Maximale Standdauer</h2>
             </div>
         </div>
@@ -45,8 +46,18 @@
             </div>
         </div>
         <div class="row">
+            <div class="col-6 offset-3 form-group text-center">
+                <h2>Messdistanz festlegen</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2 offset-5 form-group">
+                <input class="form-control text-center" type="text" name="meassure_distance" placeholder="">
+            </div>
+        </div>
+        <div class="row">
             <div class="col-6 offset-3 text-center">
-                <button type="submit" class="btn submit-btn">Standdauer speichern</button>
+                <button type="submit" class="btn submit-btn">Einstellungen speichern</button>
             </div>
         </div>
     </form>
@@ -54,7 +65,7 @@
     <form action="{{route('settings.updateTimes', 1)}}" method="POST" class="my-5">
         @csrf
         <div class="row">
-            <div class="col-6 offset-3 form-group">
+            <div class="col-6 offset-3 form-group text-center">
                 <h2>Öffnungszeiten</h2>
             </div>
         </div>

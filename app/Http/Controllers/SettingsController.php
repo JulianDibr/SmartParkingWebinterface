@@ -9,7 +9,7 @@ class SettingsController extends Controller {
         return view('settings');
     }
 
-    public function updateParkingtime(settings $settings) {
+    public function update(settings $settings) {
 
     }
 
