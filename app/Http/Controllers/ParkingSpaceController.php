@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\ParkingSpace;
 use App\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -41,16 +42,18 @@ class ParkingSpaceController extends Controller {
     }
 
     public function getAllStatus() {
-        $openingTimes = User::find(1)->parkingTimes;
+        $openingTimes = User::find(1)->parkingTimes; //Get open hours
+        $days = $openingTimes->days; //Get open days
+        $now = Carbon::now(); //Current date
 
-        //TODO if current Time between $openingTimes and on selected dates => by status else all false
+        $dayOpen = $days->pluck('day')->contains($now->dayOfWeek); //Current day in open days
+        $hoursOpen = $now->format('H:i:s') >= $openingTimes->open_time && $now->format('H:i:s') <= $openingTimes->close_time; //Current time between open hours
 
-        if (true) {
+        if ($dayOpen && $hoursOpen) {
             $spaces = ParkingSpace::select('device_id', 'status')->get();
-            dd($spaces);
             return [
                 'opened' => true,
-
+                'spaces' => $spaces
                 ];
         } else {
             return ['opened' => false];

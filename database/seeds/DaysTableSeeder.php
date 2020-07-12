@@ -32,7 +32,7 @@ class DaysTableSeeder extends Seeder {
                 'name' => 'Samstag',
             ],
             [
-                'day' => 7,
+                'day' => 0,
                 'name' => 'Sonntag',
             ],
         ]);

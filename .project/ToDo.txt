@@ -1,5 +1,4 @@
 Bei API Call send Call an Tafel => Aktualisieren
-Zusammenstellung aller Status
 
 Webinterface:
 Telegram Bot => In Gruppe oder an Kontakt bei Statusänderung oder Überschreitung eine Nachricht
