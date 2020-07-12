@@ -1,0 +1,12 @@
+Bei API Call send Call an Tafel => Aktualisieren
+Zusammenstellung aller Status
+
+Webinterface:
+Telegram Bot => In Gruppe oder an Kontakt bei Statusänderung oder Überschreitung eine Nachricht
+Settings Telegrambot konfigurieren
+Max Parkdauer überschritten feststellen und als Status 2 anzeigen orange ==> Übergabe an ESP32?
+
+ESP32:
+Bei Start get meassure distance von api
+Filterung verbessern? => Bei zu hohen Wert direkt neu messen
+Buffer von 5 Messungen wenn Mehrzahl anderen Status dann aktualisieren?

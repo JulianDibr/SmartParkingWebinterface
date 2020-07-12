@@ -72,6 +72,10 @@ html, body {
     color: $red;
 }
 
+.orange {
+    color: $orange;
+}
+
 .space-card {
     height: 150px;
     border-radius: 5px;
@@ -83,6 +87,10 @@ html, body {
 
 .border-occupied {
     border: 1px solid $red;
+}
+
+.border-other {
+    border: 1px solid $orange;
 }
 
 .submit-btn {

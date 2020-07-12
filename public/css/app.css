@@ -11003,6 +11003,10 @@ body {
   color: #e3342f;
 }
 
+.orange {
+  color: #f6993f;
+}
+
 .space-card {
   height: 150px;
   border-radius: 5px;
@@ -11014,6 +11018,10 @@ body {
 
 .border-occupied {
   border: 1px solid #e3342f;
+}
+
+.border-other {
+  border: 1px solid #f6993f;
 }
 
 .submit-btn {
