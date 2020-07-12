@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\settings;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -30,5 +31,14 @@ class SettingsController extends Controller {
         }
 
         return redirect()->route('settings.index');
+    }
+
+    public function getSettings() {
+        $settings = User::find(1)->settings;
+
+        return [
+            'max_parkingtime' => $settings->max_parkingtime,
+            'meassure_distance' => $settings->meassure_distance,
+        ];
     }
 }

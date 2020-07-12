@@ -17,4 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/getSettings', 'SettingsController@getSettings');
 Route::post('/sendStatus', 'ParkingSpaceController@updateStatus');
+Route::get('/getAllStatus', 'ParkingSpaceController@getAllStatus');

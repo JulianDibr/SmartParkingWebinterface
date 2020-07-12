@@ -4,7 +4,7 @@ Zusammenstellung aller Status
 Webinterface:
 Telegram Bot => In Gruppe oder an Kontakt bei Statusänderung oder Überschreitung eine Nachricht
 Settings Telegrambot konfigurieren
-Max Parkdauer überschritten feststellen und als Status 2 anzeigen orange ==> Übergabe an ESP32?
+Status 2  orange ==> Übergabe an ESP32?
 
 ESP32:
 Bei Start get meassure distance von api

@@ -1,5 +1,9 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/brands';
 
 // Variables
 @import 'variables';
@@ -77,20 +81,23 @@ html, body {
 }
 
 .space-card {
-    height: 150px;
+    height: 175px;
     border-radius: 5px;
 }
 
 .border-free {
     border: 1px solid $green;
+    border-radius: 5px;
 }
 
 .border-occupied {
     border: 1px solid $red;
+    border-radius: 5px;
 }
 
 .border-other {
     border: 1px solid $orange;
+    border-radius: 5px;
 }
 
 .submit-btn {
@@ -105,6 +112,15 @@ html, body {
     }
 }
 
-h2{
+h2 {
     font-size: 16px;
+}
+
+.div-link {
+    color: $black;
+
+    &:hover {
+        text-decoration: none;
+        color: $black;
+    }
 }
