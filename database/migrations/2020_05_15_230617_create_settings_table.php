@@ -8,8 +8,8 @@ class CreateSettingsTable extends Migration {
     public function up() {
         Schema::create('settings', function (Blueprint $table) {
             $table->id();
-            $table->time('max_parkingtime');
-            $table->integer('meassure_distance');
+            $table->time('max_parkingtime')->default("00:00:00");
+            $table->integer('meassure_distance')->default(0);
             $table->unsignedBigInteger('user_id');
             $table->timestamps();
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\ParkingTime;
 use App\settings;
 use App\User;
 use Illuminate\Http\Request;
@@ -26,6 +27,10 @@ class SettingsController extends Controller {
     public function updateTimes(Request $request) {
         //Update der Parkzeiten
         $parkingTimes = Auth::user()->parkingTimes;
+        if(!$parkingTimes){
+            $parkingTimes = new ParkingTime(['open_time' => $request->open_time, 'close_time' => $request->close_time, 'user_id' => Auth::id()]);
+            $parkingTimes->save();
+        }
         $parkingTimes->update($request->all());
 
         $parkingTimes->days()->detach();

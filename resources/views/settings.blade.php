@@ -86,7 +86,7 @@
             <div class="col-6 offset-3 form-group">
                 <select name="days[]" id="days" class="selectpicker w-100" multiple title="Noch keine Tage ausgewählt">
                     @foreach($days::all() as $day)
-                        <option value="{{$day->id}}" {{$opening_times->days->contains($day->id) ? 'selected' : ''}}>{{$day->name}}</option>
+                        <option value="{{$day->id}}" {{!empty($opening_times->days) ? ($opening_times->days->contains($day->id) ? 'selected' : '') : '' }}>{{$day->name}}</option>
                     @endforeach
                 </select>
             </div>

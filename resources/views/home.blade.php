@@ -6,9 +6,10 @@
     <h1 class="text-center">Übersicht</h1>
 
     <div class="row my-5">
-        @foreach($parkingSpaces::all() as $space)
+        @foreach(Auth::user()->parkingSpaces as $space)
             <div class="col-3">
-                <div class="row mx-0 @if($space->status == 0) border-free @elseif($space->status == 1) border-occupied @elseif($space->status == 2) border-other @endif">
+                <div
+                    class="row mx-0 @if($space->status == 0) border-free @elseif($space->status == 1) border-occupied @elseif($space->status == 2) border-other @endif">
                     <div class="col-10">
                         <a class="div-link" href="{{route('parkingSpace.edit', $space->id)}}">
                             <div class="space-card p-3">
@@ -34,7 +35,8 @@
                         </a>
                     </div>
                     <div class="form-container col-2 text-center pt-3 px-0">
-                        <button class="btn col-2 my-auto" onclick="$(this).parent().find('#delete-parkingspace').submit()"><i class="fas fa-minus-circle"></i>
+                        <button class="btn col-2 my-auto" onclick="$(this).parent().find('#delete-parkingspace').submit()"><i
+                                class="fas fa-minus-circle"></i>
                         </button>
                         <form id="delete-parkingspace" action="{{route('parkingSpace.destroy', $space->id)}}" class="d-none" method="POST">
                             @csrf
@@ -45,4 +47,10 @@
             </div>
         @endforeach
     </div>
+
+    <script>
+        setTimeout(function () {
+            window.location.reload(1);
+        }, 5000);
+    </script>
 @endsection

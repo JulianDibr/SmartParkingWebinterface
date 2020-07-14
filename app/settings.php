@@ -6,7 +6,7 @@ use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 class settings extends Model {
-    protected $fillable = ['max_parkingtime', 'meassure_distance'];
+    protected $fillable = ['max_parkingtime', 'meassure_distance', 'user_id'];
 
     public function getMaxParkingtimeinMin() {
         $max = $this->max_parkingtime; //Maximale Parkdauer aus Einstellungen auslesen
