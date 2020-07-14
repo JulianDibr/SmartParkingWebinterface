@@ -1,5 +1,0 @@
-Webinterface:
-Telegram Bot => In Gruppe oder an Kontakt bei Statusänderung oder Überschreitung eine Nachricht
-Settings Telegrambot konfigurieren
-Status 2  orange ==> Übergabe an ESP32?
-

@@ -9,12 +9,14 @@ use Illuminate\Support\Facades\Auth;
 
 class SettingsController extends Controller {
     public function index() {
+        //Einstellungsseite aufrufen, Übergabe der Einstellungen und Parkzeiten
         $settings = Auth::user()->settings;
         $opening_times = Auth::user()->parkingTimes;
         return view('settings', compact('settings', 'opening_times'));
     }
 
     public function update(Request $request, $id) {
+        //Update der Einstellungen
         $settings = settings::find($id);
         $settings->update($request->all());
 
@@ -22,6 +24,7 @@ class SettingsController extends Controller {
     }
 
     public function updateTimes(Request $request) {
+        //Update der Parkzeiten
         $parkingTimes = Auth::user()->parkingTimes;
         $parkingTimes->update($request->all());
 
@@ -34,6 +37,7 @@ class SettingsController extends Controller {
     }
 
     public function getSettings() {
+        //Einstellungen für API zusammenstellen
         $settings = User::find(1)->settings;
 
         return [

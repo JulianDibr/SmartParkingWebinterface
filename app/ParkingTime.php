@@ -8,6 +8,7 @@ class ParkingTime extends Model {
     protected $fillable = ['open_time', 'close_time'];
 
     public function days() {
+        //Get: Alle Tage die für eine Öffnungszeitraum gelten
         return $this->belongsToMany('App\Day');
     }
 }

@@ -36,14 +36,17 @@ class User extends Authenticatable {
     ];
 
     public function parkingSpaces() {
+        ///Get: Parkplätze die zu dem eingeloggten Nutzer gehören
         return $this->hasMany('App\ParkingSpace');
     }
 
     public function parkingTimes() {
+        ///Get: Parkzeiten die zu dem eingeloggten Nutzer gehören
         return $this->hasOne('App\ParkingTime');
     }
 
     public function settings() {
+        ///Get: Einstellungen des Nutzers
         return $this->hasOne('App\settings');
     }
 }

@@ -33,8 +33,8 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-2 text-center pt-3 px-0">
-                        <button class=" btn col-2 my-auto" onclick="$('#delete-parkingspace').submit()"><i class="fas fa-minus-circle"></i>
+                    <div class="form-container col-2 text-center pt-3 px-0">
+                        <button class="btn col-2 my-auto" onclick="$(this).parent().find('#delete-parkingspace').submit()"><i class="fas fa-minus-circle"></i>
                         </button>
                         <form id="delete-parkingspace" action="{{route('parkingSpace.destroy', $space->id)}}" class="d-none" method="POST">
                             @csrf
