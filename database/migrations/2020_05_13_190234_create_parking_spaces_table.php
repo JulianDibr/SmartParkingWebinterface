@@ -8,7 +8,7 @@ class CreateParkingSpacesTable extends Migration {
     public function up() {
         Schema::create('parking_spaces', function (Blueprint $table) {
             $table->id();
-            $table->string('device_id')->unique();
+            $table->string('device_id');
             $table->string('name');
             $table->string('group');
             $table->integer('status')->default(0); //0=no => Not Occupied; 1=yes => Occupied
