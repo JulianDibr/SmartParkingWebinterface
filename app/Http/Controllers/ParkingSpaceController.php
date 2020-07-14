@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\ParkingSpace;
+use App\settings;
 use App\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -31,10 +32,12 @@ class ParkingSpaceController extends Controller {
 
     public function updateStatus(Request $request) {
         $parkingSpace = ParkingSpace::where('device_id', $request->device_id)->get()->first();
-        if ($parkingSpace->currentParkdauer() > Auth::user()->settings->max_parkingtime) {
+        if ($parkingSpace->currentParkdauer() > Settings::find(1)->max_parkingtime) {
             $parkingSpace->setStatusAttribute(2);
         } else {
-            $parkingSpace->setStatusAttribute($request->status);
+            if($parkingSpace->status !== $request->status) {
+                $parkingSpace->setStatusAttribute($request->status);
+            }
         }
         $parkingSpace->update();
 
@@ -52,11 +55,11 @@ class ParkingSpaceController extends Controller {
         if ($dayOpen && $hoursOpen) {
             $spaces = ParkingSpace::select('device_id', 'status')->get();
             return [
-                'opened' => true,
+                'opened' => "true",
                 'spaces' => $spaces
                 ];
         } else {
-            return ['opened' => false];
+            return ['opened' => "false"];
         }
     }
 }
